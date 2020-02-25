@@ -1,18 +1,18 @@
 import React from 'react';
 import reactDOM from 'react-dom';
+import CommentDetail from './CommentDetail';
 
 const App = () => {
-    const buttonText = 'Click Here';
-    const style = {backgroundColor: 'green', color: 'white'};
-
-    return <div>
-        <label className="label" htmlFor="name">Enter Name:</label>
-        <input id="name" type="text"/>
-        <button style={style}>{buttonText}</button>
-    </div>
-}
+    return (
+        <div className="ui container comments">
+            <CommentDetail />
+            <CommentDetail />
+            <CommentDetail />
+        </div>
+    );
+};
 
 reactDOM.render(
     <App />,
     document.querySelector('#root')
-)
+);
